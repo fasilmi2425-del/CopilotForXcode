@@ -1,0 +1,14 @@
+import pandas as pd
+from scipy import stats
+
+# Sample dataset of student scores
+data = {'Scores': [80, 90, 70, 90, 85, 90]}
+df = pd.DataFrame(data)
+
+# Calculate mean
+mean_score = df['Scores'].mean()
+print("Mean:", mean_score)
+
+# Calculate mode
+mode_score = stats.mode(df['Scores'])[0][0]
+print("Mode:", mode_score)
